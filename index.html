@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Sistem Informasi Akademik Fakultas Teknik UPM</title>
+<script>
+function masuk() {
+	var username = document.login.username.value;
+	var password = document.login.password.value;
+	if (username == "admin" && password == "admin") {
+		window.location.href = "admin/berhasiladmin.html";
+	}
+	else if (username == "kaprodi" && password == "kaprodi") {
+		window.location.href = "kaprodi/berhasilkaprodi.html";
+	}
+	else if (username == "dosen" && password == "dosen") {
+		window.location.href = "dosen/berhasildosen.html";
+	}
+	else if (username == "mahasiswa" && password == "mahasiswa") {
+		window.location.href = "dosen/berhasildosen.html";
+	}
+	else {
+		alert("Maaf, username atau password yang Anda masukkan salah.");
+	}
+}
+</script>
+</head>
+<link rel="stylesheet" type="text/css" href="gaya.css">
+<body background="ilaa.png"text="white">
+<body>
+<div align="center">
+<img src="logo.png" width="200" height="200">
+<h1>Sistem Informasi Akademik<br>Fakultas Teknik UPM</h1>
+<table border="1" cellspacing="0">
+<form name="login">
+<tr><td>Username</td><td><input type="text" name="username"></td></tr>
+<tr><td>Password</td><td><input type="password" name="password"></td></tr>
+<tr><td></td><td><input type="button" value="Submit" onClick="masuk()"></td></tr>
+</form>
+</table>
+<br><br><br>Dibuat Oleh Siti Ila Maufiro<br>  
+</div>
+</body>
+</html>
